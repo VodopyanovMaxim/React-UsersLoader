@@ -20,7 +20,7 @@ export default function UserItem(props) {
   });
   return (
     <article className={userCardClasses}>
-      <img src={medium} alt={fullName} />
+      <img src={medium} alt={fullName} className={styles.picture} />
       <div className={styles.info}>
         <h2 className={styles.name}>{fullName}</h2>
         <p>{email}</p>
