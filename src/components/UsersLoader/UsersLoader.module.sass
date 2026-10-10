@@ -1,0 +1,99 @@
+@import './../../common/style/vars.sass'
+	
+%flex
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+%loadingMessage
+	font-size: 2rem
+	width: 500px
+	position: absolute
+	text-align: center
+
+.navigationBar
+	@extend %flex
+	justify-content: center
+	color: $navigationTextColor
+	background-color: #2c2c2cff
+	height: 40px
+	position: fixed
+	width: 100vw
+
+.contentWrap
+	@extend %flex
+	width: 1200px
+	align-self: center
+
+.userList
+	@extend %flex
+	padding: 60px 20px 20px
+	flex-direction: column
+	gap: 25px
+
+.controlGroup
+	@extend %flex
+	gap: 15px
+	height: 30px
+	padding: 5px 25px
+
+.label
+	@media screen and (max-width: 800px)
+		display: none
+
+.pageInput
+	height: 100%
+	text-align: center
+	font-size: 1.1rem
+	border: 0
+
+.pageNum
+	font-weight: 600
+
+.pageBtn
+	align-self: flex-end
+	border: 0
+	width: 120px
+	height: 100%
+
+.active
+	cursor: pointer
+	background-color:  #ff486dff
+	&:hover
+		color: $navigationTextColor
+
+.inactive
+	cursor: default
+	background-color: #7c7c7cff
+	&:hover
+		outline:0
+
+.message
+	@extend %loadingMessage
+	color: #ffffff
+
+.error
+	@extend %loadingMessage
+	color: #ff4167
+
+.genderDropdownLabel
+	padding: 0 15px
+
+.genderDropdown
+	position: relative
+	min-width: 140px
+	cursor: pointer
+	&:hover
+		.genderOptions
+			display: block
+
+.genderOptions
+	display: none
+	position: absolute
+	min-width: 140px
+
+.genderOption
+	padding: 15px
+	background-color: #2c2c2cff
+	&:hover
+		background-color: #929292ff
